@@ -1,0 +1,56 @@
+<html>
+ <head>
+  <link rel="Stylesheet" href="calculator.css" type="text/css">
+  <Script type="text/JavaScript" src="calculator.js"></Script>
+ </head>
+ <body onload="TabRehne()">
+  <form name="calc" action="" id="Calculator">
+   <Table Id="TabReh">
+    <Tr>
+     <Td colspan="6"><input Id="inputRe" name="ReadOut"  value="" type="text"></Td>
+    </Tr>
+    <Tr>
+     <Td><input name="btnNull" value="0" onclick="NumPressed(0)" type="button"></Td>
+     <Td><input name="btnOne" value="1" onclick="NumPressed(1)" type="button"></Td>
+     <Td><input name="btnTwo" value="2" onclick="NumPressed(2)" type="button"></Td>
+     <Td><input name="btnThree" value="3" onclick="NumPressed(3)" type="button"></Td>
+     <Td><input name="btnTvalv" value="4" onclick="NumPressed(4)" type="button"></Td>
+     <Td><input name="btnFour" value="5" onclick="NumPressed(5)" type="button"></Td>
+    </Tr>
+    <Tr>
+     <Td><input name="btnTan" value="6" onclick="NumPressed(6)" type="button"></Td>
+     <Td><input name="btnFive" value="7" onclick="NumPressed(7)" type="button"></Td>
+     <Td><input name="btnVane" value="8" onclick="NumPressed(8)" type="button"></Td>
+     <Td><input name="btnAlavan" value="9" onclick="NumPressed(9)" type="button"></Td>
+     <Td><input name="btnDecimal" value="." onclick="Decimal()" type="button"></Td>
+     <Td><input name="btnPlus" value="+" onclick="Operation('+')" type="button"></Td>
+    </Tr>
+    <Tr>
+     <Td><input name="btnMinus" value="-" onclick="Operation('-')" type="button"></Td>
+     <Td><input name="btnMultiply" value="*" onclick="Operation('*')" type="button"></Td>
+     <Td><input name="btnDivide" value="/" onclick="Operation('/')" type="button"></Td>
+     <Td><input name="btnNeg" value="+/-" onclick="Neg()" type="button"></Td>
+     <Td><input name="btnPercent" value="1%" onclick="Percent()" type="button"></Td>
+     <Td><input name="btnE" value="*e" onclick="MultiplyE()" type="button"></Td>
+    </Tr>
+    <Tr>
+     <Td><input name="btnPi" value="*Pi" onclick="MultiplyPi()" type="button"></Td>
+     <Td><input name="btnQs" value="n*n" onclick="Qs()" type="button"></Td>
+     <Td><input name="btnQsq" value="nnn" onclick="Qsq()" type="button"></Td>
+     <Td><input name="btnClear"  value="C" onclick="Clear()" id="btnClear" type="button"></Td>
+     <Td><input name="btnClearEntry" value="CE" onclick="ClearEntry()" type="button"></Td>
+     <Td><input name="btnEquals" value="=" onclick="Operation('=')" id="btnWide" type="button"></Td>
+    </Tr>
+    <Tr>
+     <Td colspan="6" id="lastModified"></Td>
+    </Tr>
+   </Table>
+  </form>
+  <script language="JavaScript">
+   var Fcalc = document.calc;
+   var Currents = 0;
+   var FlagNewNum = false;
+   var PendingOp = "";
+  </script>
+ </body>
+</html>
